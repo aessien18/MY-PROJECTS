@@ -25,12 +25,9 @@ average_scores = {student: sum(scores) / len(scores) for student, scores in Stud
 # Sort students by average score
 name = list(average_scores.keys())
 avg = list(average_scores.values())
-# Create a bar chart
-plt.figure(figsize=(12, 6))
-plt.bar(name, avg, color='skyblue')
+
+plt.plot(name, avg, marker='o')
+plt.title('Average Scores of Students')
 plt.xlabel('Students')
 plt.ylabel('Average Score')
-plt.title('Average Scores of Students')
-plt.xticks(rotation=45)
-plt.ylim(0, 100)
 plt.show()
